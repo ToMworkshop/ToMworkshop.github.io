@@ -4,4 +4,30 @@
     <link rel="stylesheet" href="{% if site.baseurl %}{{site.baseurl}}{% else %}{% endif %}/assets/css/style.css">
     <script src="https://kit.fontawesome.com/6a97161b76.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="{% if site.favicon-url %}{{site.favicon-url}}{% else %}{{ 'assets/images/ToM-workshop-logo.png' | absolute_url }}{% endif %}" type="image/x-icon">
+
+    {% if page.url contains "schedule.html" %}
+  <style>
+    .schedule-table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+    .schedule-table th, .schedule-table td {
+      padding: 10px 15px;
+      vertical-align: top;
+      border: 1px solid #ddd;
+    }
+    .schedule-table thead th {
+      background-color: #f0f0f0;
+      text-align: left;
+      font-weight: bold;
+    }
+    .break-row td {
+      background-color: #f9f9f9;
+      text-align: center;
+      font-style: italic;
+    }
+  </style>
+  {% endif %}
 </head>
